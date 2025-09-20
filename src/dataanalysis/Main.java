@@ -25,6 +25,7 @@ public class Main {
         Set<String> seenArgs = new HashSet<>();
         Pattern pattern = Pattern.compile("^--(?<name>.+?)=(?<value>.+)$");
 //test
+        //another test
         // Argument parsing with validation
         for (String arg : args) {
             Matcher matcher = pattern.matcher(arg);
@@ -55,6 +56,8 @@ public class Main {
                     break;
                 case "properties":
                     propertyFile = value;
+                    break;
+                case "test":
                     break;
                 case "log":
                     logFile = value;
